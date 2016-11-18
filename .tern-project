@@ -1,6 +1,9 @@
 {
   "ecmaVersion": 7,
-  "libs": [],
+  "libs": [
+    "browser",
+    "jquery"
+  ],
   "plugins": {
     "node": {
       "dontLoad": "",
