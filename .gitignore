@@ -1,3 +1,23 @@
 node_modules/
 
-.idea/workspace.xml
+.idea/
+client/.idea/
+
+# client/
+# dependencies
+client/node_modules/
+
+# testing
+client/coverage
+
+# production
+client/build/
+
+# misc
+client/.DS_Store
+client/.env
+client/npm-debug.log
+
+.DS_Store
+.env
+npm-debug.log
