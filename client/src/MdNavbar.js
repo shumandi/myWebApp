@@ -4,7 +4,9 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/css/bootstrap-theme.css';
-import {Navbar, Nav, NavItem, NavDropdown,MenuItem} from 'react-bootstrap';
+import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
+import {Link} from 'react-router';
+import MdAbout from './MdAbout';
 
 class MdNavbar extends Component {
   render() {
@@ -20,13 +22,17 @@ class MdNavbar extends Component {
           <Navbar.Collapse>
             <Nav>
               <NavItem eventKey={1} href="#">Blog</NavItem>
-              <NavItem eventKey={2} href="#">About</NavItem>
+              <li role="presentation">
+                <Link to="/about">About</Link>
+              </li>
             </Nav>
             <Nav pullRight>
-              <NavItem eventKey={2} href="https://github.com/shumandi/myWebApp">GitHub</NavItem>
+              <li role="presentation">
+                <a href="https://github.com/shumandi/myWebApp">GitHub</a>
+              </li>
               <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
                 <MenuItem eventKey={3.1}>Action</MenuItem>
-                <MenuItem divider />
+                <MenuItem divider/>
                 <MenuItem eventKey={3.3}>Separated link</MenuItem>
               </NavDropdown>
             </Nav>
