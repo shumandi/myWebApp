@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import MdNavbar from './MdNavbar';
 import MdFooter from './MdFooter';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap-theme.css';
 import './App.css';
 
 class App extends Component {

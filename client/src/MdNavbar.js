@@ -2,16 +2,13 @@
  * Created by mon on 2016/11/21.
  */
 import React, {Component} from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
-import {Navbar, Nav, NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
+import {Navbar, NavDropdown, MenuItem} from 'react-bootstrap'
 import {Link} from 'react-router';
-import MdAbout from './MdAbout';
 
 class MdNavbar extends Component {
   render() {
     return (
-      <div>
+      <div className="navbar">
         <Navbar inverse collapseOnSelect>
           <Navbar.Header>
             <Navbar.Brand>
@@ -20,22 +17,25 @@ class MdNavbar extends Component {
             <Navbar.Toggle />
           </Navbar.Header>
           <Navbar.Collapse>
-            <Nav>
-              <NavItem eventKey={1} href="#">Blog</NavItem>
+            <ul className="nav navbar-nav">
               <li role="presentation">
-                <Link to="/about">About</Link>
+                <Link to="blogmain">Blog</Link>
               </li>
-            </Nav>
-            <Nav pullRight>
+              <li role="presentation">
+                <Link to="about">About</Link>
+              </li>
+            </ul>
+            <ul className="nav navbar-nav navbar-right">
               <li role="presentation">
                 <a href="https://github.com/shumandi/myWebApp">GitHub</a>
               </li>
-              <NavDropdown eventKey={3} title="Dropdown" id="basic-nav-dropdown">
-                <MenuItem eventKey={3.1}>Action</MenuItem>
-                <MenuItem divider/>
-                <MenuItem eventKey={3.3}>Separated link</MenuItem>
+              <NavDropdown title="用户管理" id="basic-nav-dropdown">
+                <li role="presentation" ><Link to="login">登陆</Link></li>
+                <li role="presentation" ><Link to="signin">注册</Link></li>
+                <MenuItem divider />
+                <li><a href="#">注销</a></li>
               </NavDropdown>
-            </Nav>
+            </ul>
           </Navbar.Collapse>
         </Navbar>
       </div>

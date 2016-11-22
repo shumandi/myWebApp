@@ -2,8 +2,6 @@
  * Created by mon on 2016/11/21.
  */
 import React, {Component} from 'react';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
 import {Row,Col} from 'react-bootstrap';
 
 class MdAbout extends Component{
